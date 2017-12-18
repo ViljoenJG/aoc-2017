@@ -15,10 +15,10 @@ cntj (57)`.split('\n').map(x => new Program(x));
 var parents = programs
   .filter(x => x.programs.length > 0);
 
-var usedParents = {}; // builds lookup used to find root;
-parents.forEach(x => x.programs.forEach(n => usedParents[n] = true));
+var nestedParents = {};
+parents.forEach(x => x.programs.forEach(n => nestedParents[n] = true));
 
-var rootProgram = programs.filter(x => !usedParents[x.name])
+var rootProgram = programs.filter(x => !nestedParents[x.name])
 console.log(rootProgram);
 
 function Program(inStr) {
