@@ -1,0 +1,23 @@
+{
+  "name": "advent-of-code-2017",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViljoenJG/aoc-2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViljoenJG/aoc-2017/issues"
+  },
+  "homepage": "https://github.com/ViljoenJG/aoc-2017#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^22.0.0"
+  }
+}

@@ -26,4 +26,11 @@ function part1(len, inStr) {
   return hashResult[0] * hashResult[1];
 }
 
-console.log(part1(5, input))
+function part2(len, inStr) {
+
+}
+
+module.exports = {
+  part1,
+  part2
+};
