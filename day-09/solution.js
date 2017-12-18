@@ -13,7 +13,10 @@ function part1(input) {
 }
 
 function part2(input) {
-  
+  return input
+    .replace(/!./g, '')
+    .match(/<.*?>/g)
+    .reduce((c, v) => c + v.length - 2, 0)
 }
 
 module.exports = {

@@ -9,3 +9,6 @@ const input = fs.readFileSync(path.join(__dirname, 'input.txt'), {
 
 const solution1 = part1(input);
 console.log(`Day 9 - part 1: ${ solution1 }`);
+
+const solution2 = part2(input);
+console.log(`Day 9 - part 2: ${ solution2 }`);
