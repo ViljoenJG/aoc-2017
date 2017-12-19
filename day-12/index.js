@@ -10,5 +10,5 @@ const input = fs.readFileSync(path.join(__dirname, 'input.txt'), {
 const solution1 = part1(input);
 console.log(solution1);
 
-// const solution2 = part2(input);
-// console.log(solution2);
+const solution2 = part2(input);
+console.log(solution2);

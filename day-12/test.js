@@ -1,6 +1,6 @@
 const { part1, part2 } = require('./solution');
 
-const dummyInput1 = `0 <-> 2
+const mockInput = `0 <-> 2
 1 <-> 1
 2 <-> 0, 3, 4
 3 <-> 2, 4
@@ -11,7 +11,13 @@ const dummyInput1 = `0 <-> 2
 describe('Day 12', () => {
   describe('Part 1', () => {
     test('Example 1', () => {
-      expect(part1(dummyInput1)).toBe(6)
+      expect(part1(mockInput)).toBe(6);
+    });
+  });
+
+  describe('Part 2', () => {
+    test('Example 1', () => {
+      expect(part2(mockInput)).toBe(2);
     });
   });
 });

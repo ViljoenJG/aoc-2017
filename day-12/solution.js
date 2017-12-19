@@ -48,7 +48,15 @@ function part1(input) {
 }
 
 function part2(input) {
-  return input;
+  let inputMap = getInputMap(input);
+  return [...Object.keys(inputMap)]
+    .reduce((acc, x) => {
+      let group = getGroupList([x], inputMap, x, []);
+      group.sort();
+      group = group.join('');
+      if (!acc.inArray(group)) acc.push(group);
+      return acc;
+    }, []).length;
 }
 
 module.exports = {
