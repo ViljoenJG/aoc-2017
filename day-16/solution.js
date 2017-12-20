@@ -33,11 +33,8 @@ function part2(programs, input, rounds) {
   let seen = [orig];
   for (let a=0; a<rounds; a++) {
     programs = part1(programs, input);
-    if (programs === orig) {
-      return seen[rounds % (a+1)];
-    } else {
-      seen.push(programs);
-    }
+    if (programs === orig) return seen[rounds % (a+1)];
+    seen.push(programs);
   }
 
   return programs;
