@@ -13,7 +13,7 @@ describe('Day 15', () => {
   });
 
   describe('Part 2', () => {
-    test.only('Number 1', () => {
+    test('Number 1', () => {
       expect(part2(mockInput)).toBe(309)
     })
   });
