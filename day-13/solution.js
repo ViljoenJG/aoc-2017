@@ -19,8 +19,9 @@ function part1(input) {
 
   for (let tick = 0; tick <= scanners.layers; tick++) {
     if (scanKeys.includes(tick)) {
-      // scanners[tick] * 2 - 2 represents the up and down movement of the scanner,
-      // minus the edges since the scanner does not scan the edges twice (only spends one tick on each element)
+      // scanners[tick] * 2 represents one up and down movement of the scanner,
+      // minus 2 for the top and bottom the edges since the scanner does not
+      // scan the edges twice (only spends one tick on each element)
       if (tick % (scanners[tick] * 2 - 2) === 0) {
         severity += tick * scanners[tick];
       }
@@ -41,8 +42,9 @@ function part2(input) {
     isCaught = false;
     for (let tick = 0; tick <= scanners.layers; tick++) {
       if (scanKeys.includes(tick)) {
-        // scanners[tick] * 2 - 2 represents the up and down movement of the scanner,
-        // minus the edges since the scanner does not scan the edges twice (only spends one tick on each element)
+        // scanners[tick] * 2 represents one up and down movement of the scanner,
+        // minus 2 for the top and bottom the edges since the scanner does not
+        // scan the edges twice (only spends one tick on each element)
         if ((tick + delay) % (scanners[tick] * 2 - 2) === 0) {
           isCaught = true;
         }
