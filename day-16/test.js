@@ -18,4 +18,10 @@ describe('Day 16', () => {
       expect(part1('abcde', 's1,x3/4,pe/b')).toBe('baedc')
     });
   });
+
+  describe('Part 2', () => {
+    test('Round 2', () => {
+      expect(part2('abcde', 's1,x3/4,pe/b', 2)).toBe('ceadb')
+    })
+  })
 })

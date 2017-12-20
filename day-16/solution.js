@@ -28,8 +28,19 @@ function part1(programs, input) {
     .join('')
 }
 
-function part2(input) {
+function part2(programs, input, rounds) {
+  let orig = programs.slice(0);
+  let seen = [orig];
+  for (let a=0; a<rounds; a++) {
+    programs = part1(programs, input);
+    if (programs === orig) {
+      return seen[rounds % (a+1)];
+    } else {
+      seen.push(programs);
+    }
+  }
 
+  return programs;
 }
 
 module.exports = {
