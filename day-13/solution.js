@@ -31,7 +31,26 @@ function part1(input) {
 }
 
 function part2(input) {
-  
+  const scanners = getScanners(input);
+  const scanKeys = Object.keys(scanners).map(Number);
+  let isCaught = true;
+  let delay = -1;
+
+  while (isCaught) {
+    delay++
+    isCaught = false;
+    for (let tick = 0; tick <= scanners.layers; tick++) {
+      if (scanKeys.includes(tick)) {
+        // scanners[tick] * 2 - 2 represents the up and down movement of the scanner,
+        // minus the edges since the scanner does not scan the edges twice (only spends one tick on each element)
+        if ((tick + delay) % (scanners[tick] * 2 - 2) === 0) {
+          isCaught = true;
+        }
+      }
+    }
+  }
+
+  return delay;
 }
 
 module.exports = {

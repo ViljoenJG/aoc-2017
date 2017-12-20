@@ -11,4 +11,10 @@ describe('Day 13', () => {
       expect(part1(mockInput)).toBe(24);
     })
   });
+
+  describe('Part 2', () => {
+    test('Example 1', () => {
+      expect(part2(mockInput)).toBe(10);
+    })
+  })
 })
