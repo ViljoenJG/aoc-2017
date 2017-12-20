@@ -10,5 +10,11 @@ describe('Day 15', () => {
     test('Number 1', () => {
       expect(part1(mockInput)).toBe(588)
     })
-  })
+  });
+
+  describe('Part 2', () => {
+    test.only('Number 1', () => {
+      expect(part2(mockInput)).toBe(309)
+    })
+  });
 })

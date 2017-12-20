@@ -15,5 +15,8 @@ const input = fs.readFileSync(path.join(__dirname, 'input.txt'), 'utf-8')
     return acc;
   },{});
 
-const solution1 = part1(input);
-console.log(`Day 15, Part 1: ${ solution1 }`);
+// const solution1 = part1(input);
+// console.log(`Day 15, Part 1: ${ solution1 }`);
+
+const solution2 = part2(input);
+console.log(`Day 15, Part 2: ${ solution2 }`);
