@@ -1,6 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
 const { part1, part2 } = require('./solution');
 
 const input = 356;
